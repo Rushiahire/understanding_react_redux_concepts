@@ -1,5 +1,7 @@
 import React from "react";
 import scott from "../images/scott.jpg";
+import BillingPage from "./BillingPage";
+
 
 const CheckOutPage = () => {
   return (
@@ -21,10 +23,10 @@ const CheckOutPage = () => {
                   <li>State</li>
                   <li>Country</li>
                   <li>
-                    <a href="">Mail</a>
+                    <a href="...">Mail</a>
                   </li>
                   <li>
-                    <a href="">Contact</a>
+                    <a href="...">Contact</a>
                   </li>
                   <button className="btn btn-warning my-2 w-100">
                     Deliver to this address
@@ -49,10 +51,10 @@ const CheckOutPage = () => {
                   <li>State</li>
                   <li>Country</li>
                   <li>
-                    <a href="">Mail</a>
+                    <a href="...">Mail</a>
                   </li>
                   <li>
-                    <a href="">Contact</a>
+                    <a href="...">Contact</a>
                   </li>
                   <button className="btn btn-success my-2 w-100">
                     Selected Delivery Address
@@ -63,7 +65,7 @@ const CheckOutPage = () => {
                 </ul>
               </div>
 
-              <div className="col-lg col-md-6 border mx-1">
+              <div className="col-lg col-md-6 border mx-1 mt-lg-0 mt-md-3">
                 <ul style={{ listStyle: "none", padding: "0" }}>
                   <li>Name</li>
                   <li>Mobile</li>
@@ -74,10 +76,10 @@ const CheckOutPage = () => {
                   <li>State</li>
                   <li>Country</li>
                   <li>
-                    <a href="">Mail</a>
+                    <a href="...">Mail</a>
                   </li>
                   <li>
-                    <a href="">Contact</a>
+                    <a href="...">Contact</a>
                   </li>
                   <button className="btn btn-warning my-2 w-100">
                     Deliver to this address
@@ -109,9 +111,12 @@ const CheckOutPage = () => {
             </div>
 
             <hr />
+            
+          <BillingPage/>
+
           </div>
 
-          <div className="col-4">
+          <div className="col-lg-4 col-sm-12">
             <button className="btn btn-warning w-100">Place Order</button>
 
             <div className="border rounded my-3 p-3">
@@ -228,30 +233,10 @@ const CheckOutPage = () => {
                     <div className="col-5">Color</div>
                     <div className="col-6"> :/Neon Yellow</div>
                     <div className="col-5">Qty</div>
-                    <div className="col-6">   :1</div>
+                    <div className="col-6"> :1</div>
                   </div>
 
-                  {/* <tr>SCOTT PLASMA TANK </tr>               
-                  <tr>
-                    <td>Model No</td>
-                    <td>: 241852</td>
-                  </tr>
-                  <tr>
-                    <td>Price</td>
-                    <td>:9990</td>
-                  </tr>
-                  <tr>
-                    <td>Size</td>
-                    <td>:S</td>
-                  </tr>
-                  <tr>
-                    <td>Color</td>
-                    <td>:/Neon Yellow</td>
-                  </tr>
-                  <tr>
-                    <td>Qty</td>
-                    <td>:1</td>
-                  </tr> */}
+                
                 </div>
               </div>
             </div>
