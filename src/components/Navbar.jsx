@@ -41,6 +41,12 @@ const Navbar = () => {
                 <Nav.Link as={Link} to={'/viewData'} >View All Data</Nav.Link>
               </li>
 
+              <li className="nav-item">
+                
+                <Nav.Link as={Link} to={'/shipping'} >Shipping</Nav.Link>
+              </li>
+
+
             </ul>
           </div>
         </div>

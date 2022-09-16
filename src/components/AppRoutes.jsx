@@ -4,6 +4,7 @@ import DataFile from "./DataFile";
 import Home from './Home';
 import AddData from "./AddData";
 import ViewAllData from "./ViewAllData";
+import CheckOutPage from "./shipping/CheckOutPage";
 
 const AppRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const AppRoutes = () => {
         <Route path='/data'  element={<DataFile/>} />
         <Route path='/addData'  element={<AddData/>} />
         <Route path='/viewData'  element={<ViewAllData/>} />
+        <Route path='/shipping'  element={<CheckOutPage/>} />
       </Routes>
     </>
   );
