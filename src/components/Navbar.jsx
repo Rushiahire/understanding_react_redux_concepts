@@ -24,11 +24,11 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Nav.Link as={Link} to={'/'} >HOME</Nav.Link>
+                <Nav.Link as={Link} to={'/'} >Home</Nav.Link>
               </li>
               <li className="nav-item">
                 
-                <Nav.Link as={Link} to={'/data'} >DATA </Nav.Link>
+                <Nav.Link as={Link} to={'/data'} >Data </Nav.Link>
               </li>
 
               <li className="nav-item">

@@ -49,7 +49,7 @@ const SearchForm = () => {
                   onChange={onHandleInput}
                 >
                   <option value="DEFAULT">Select State</option>
-                  <option>One</option>
+                  <option>Maharashtra</option>
                   <option>Two</option>
                   <option>Three</option>
                 </select>
@@ -67,9 +67,9 @@ const SearchForm = () => {
                     id="brand"
                   >
                     <option value="DEFAULT">Select Brand</option>
-                    <option>One</option>
-                    <option>Two</option>
-                    <option>Three</option>
+                    <option>Brand1</option>
+                    <option>Brand2</option>
+                    <option>Brand3</option>
                   </select>
                 </label>
               </div>
@@ -86,9 +86,9 @@ const SearchForm = () => {
                   name="city"
                 >
                   <option value="DEFAULT">Select City</option>
-                  <option>One</option>
-                  <option>Two</option>
-                  <option>Three</option>
+                  <option>Mumbai</option>
+                  <option>Nashik</option>
+                  <option>Pune</option>
                 </select>
               </label>
 
@@ -121,10 +121,10 @@ const SearchForm = () => {
 
                 return(
                   <ul key={index}>
-                    <li>{state}</li>
-                    <li>{city}</li>
-                    <li>{brand}</li>
-                    <li>{store}</li>
+                    <li>The State is {state}</li>
+                    <li>The city is {city}</li>
+                    <li>The brand is {brand}</li>
+                    <li>The Store is {store}</li>
 
                   </ul>
                 )

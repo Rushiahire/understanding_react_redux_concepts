@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector , useDispatch } from "react-redux";
-import { onFormDiscriptionChange , onFormNameChangeAction ,addDataInList } from "../store/Action/TodoFormActions";
+import { onFormDiscriptionChange , onFormNameChangeAction , resetFormAction ,addDataInList} from "../store/Action/TodoFormActions";
 import { useNavigate } from "react-router-dom";
 
 
@@ -25,6 +25,9 @@ const AddData = () => {
       name : formName,
       description : formDescription   
     }));
+
+    dispatch(resetFormAction())
+    
     navigate('/viewData')
   }
 
@@ -58,6 +61,8 @@ const AddData = () => {
             type="text"
             className="form-control"
             id="description"
+            name="description"
+            value={formDescription}
             rows="5"
             autoComplete="off"
             onChange={(event)=>{
@@ -79,7 +84,9 @@ const AddData = () => {
         </button>
       </form>
 
-     
+      
+
+       
     </>
   );
 };

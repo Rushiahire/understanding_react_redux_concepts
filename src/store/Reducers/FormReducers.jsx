@@ -1,10 +1,10 @@
-import { ON_FORM_NAME_CHANGE_ACTION , ON_FORM_DESCRIPTION_CHANGE_ACTION , ADD_DATA_IN_LIST } from '../Action/ActionTypes';
+import { ON_FORM_NAME_CHANGE_ACTION , ON_FORM_DESCRIPTION_CHANGE_ACTION ,RESET_ALL_DATA } from '../Action/ActionTypes';
 
 const initialState = {
     name : '',
     description : '',
-    
-}
+    list : []
+};
 
 
 const onFormNameChangeReducer = (currentValue , newValue) => {
@@ -14,7 +14,7 @@ const onFormNameChangeReducer = (currentValue , newValue) => {
     }
     
     
-}
+};
 
 const onFormDescriptionChangeReducer = (currentValue , newValue) => {
     return {
@@ -23,29 +23,24 @@ const onFormDescriptionChangeReducer = (currentValue , newValue) => {
     }
 };
 
-
-// const onFormSubmitDataAdd = (oldData , newData) => {
-//     return {
-//         list:[...oldData,newData]
-        
-//     }
-// }
-
+const resetFormReducer = () => {
+    return initialState
+}
 
 
 export const FormReducer = (state=initialState,action) => {
     switch(action.type) {
         case ON_FORM_NAME_CHANGE_ACTION:
-            return onFormNameChangeReducer(state,action.name);
+            return onFormNameChangeReducer(state,action.payload);
 
         case ON_FORM_DESCRIPTION_CHANGE_ACTION:
-            return onFormDescriptionChangeReducer(state,action.description);
+            return onFormDescriptionChangeReducer(state,action.payload);
 
+        case RESET_ALL_DATA:
+            return resetFormReducer();
 
-       
-        
         default :
             return state;
     }
 
-}
+};
