@@ -1,43 +1,38 @@
 import React from "react";
-import { useSelector , useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { deleteItemFromList } from "../store/Action/TodoFormActions";
 
 const ViewAllData = () => {
+  
 
-  const dispatch = useDispatch();
+  const data = useSelector((state)=>
+    state.AddDataReducer.list
+  );
+  
+  
 
-  const allData = useSelector((state) => {
-    return state.AddDataReducer.list;
-    
-  });
-  console.log(allData)
 
   return (
     <>
-    
-      <div className="text-center mt-5">
-        {
-        allData.map((value, index) => {
-          return (
-            <div key={index} className="d-flex justify-content-around w-25">
-              <div>
-              <h4>{value.name}</h4>
-              <h3>{value.description}</h3>
-
-              <div>
-                <button className="btn btn-primary" 
-                onClick={()=>{
-                  dispatch(deleteItemFromList())
-                }}>
-                  Delete
-                </button>
-              </div>
-              
-              </div>
+     <div>
+      {
+        data.map((value,index)=>{
+          return(
+            <div>
+            <div key={index}>
+              <p>{value.data.name}</p>
+              <p>{value.data.description}</p>
             </div>
-          );
-        })}
-      </div>
+            <div>
+              <button className="btn btn-primary" >
+                Delete
+              </button>
+            </div>
+            </div>
+          )
+        })
+      }
+    </div>
     </>
   );
 };

@@ -1,33 +1,34 @@
-import React from "react";
-import { useSelector , useDispatch } from "react-redux";
-import { onFormDiscriptionChange , onFormNameChangeAction , resetFormAction ,addDataInList} from "../store/Action/TodoFormActions";
+import React,{useState } from "react";
+import { useDispatch } from "react-redux";
+import { addDataInList } from "../store/Action/TodoFormActions";
 import { useNavigate } from "react-router-dom";
 
 
 const AddData = () => {
 
+  const [ inputData , setInputData ] = useState("");
+
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const formName = useSelector((state)=>{
-    return state.FormReducer.name;
-  });
+  
 
-  const formDescription = useSelector((state)=>{
-    return state.FormReducer.description;
-  });
+ const onHandleInput = (event) => {
+    const { name , value } = event.target;
 
- 
+    setInputData({
+      ...inputData,
+      [name]:value
+    })
+ }
+
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    dispatch(addDataInList({
-      name : formName,
-      description : formDescription   
-    }));
-
-    dispatch(resetFormAction())
-    
+   
+    dispatch(addDataInList(inputData),
+    setInputData(""))
     navigate('/viewData')
   }
 
@@ -45,11 +46,8 @@ const AddData = () => {
             name="name"
             aria-describedby="emailHelp"
             autoComplete="off"
-            value={formName}
-            onChange={(event)=>{
-              const { value } = event.target;
-              dispatch(onFormNameChangeAction(value))
-            }}
+            value={inputData.name}
+            onChange={onHandleInput}
           />
          
         </div>
@@ -62,31 +60,17 @@ const AddData = () => {
             className="form-control"
             id="description"
             name="description"
-            value={formDescription}
+            value={inputData.description}
             rows="5"
             autoComplete="off"
-            onChange={(event)=>{
-              const { value } = event.target;
-              dispatch(onFormDiscriptionChange(value))
-            }}
+            onChange={onHandleInput}
           />
         </div>
-
-        {/* <div className="mb-3 form-check">
-          <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-          <label className="form-check-label" for="exampleCheck1">
-            Check me out
-          </label>
-        </div> */}
 
         <button type="submit" className="btn btn-primary">
           Add Data
         </button>
       </form>
-
-      
-
-       
     </>
   );
 };

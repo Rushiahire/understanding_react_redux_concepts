@@ -99,7 +99,7 @@ const BillingPage = () => {
             value=""
             id="flexCheckDefault"
           />
-          <label className="form-check-label" for="flexCheckDefault">
+          <label className="form-check-label" htmlFor="flexCheckDefault">
             Same as Billing Address
           </label>
         </div>

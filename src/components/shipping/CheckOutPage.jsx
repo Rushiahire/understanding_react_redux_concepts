@@ -106,7 +106,7 @@ const CheckOutPage = () => {
                 value=""
                 id="flexCheckDefault"
               />
-              <label className="form-check-label" for="flexCheckDefault">
+              <label className="form-check-label" htmlFor="flexCheckDefault">
                 Same as Billing Address
               </label>
             </div>
@@ -123,13 +123,13 @@ const CheckOutPage = () => {
               <div className="row card rounded mx-1 my-3 p-3">
                 <div className="col">
                   <div
-                    class="accordion accordion-flush border"
+                    className="accordion accordion-flush border"
                     id="accordionFlushExample"
                   >
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingOne">
+                    <div className="accordion-item">
+                      <h2 className="accordion-header" id="flush-headingOne">
                         <button
-                          class="accordion-button collapsed"
+                          className="accordion-button collapsed"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#flush-collapseOne"
@@ -141,11 +141,11 @@ const CheckOutPage = () => {
                       </h2>
                       <div
                         id="flush-collapseOne"
-                        class="accordion-collapse collapse"
+                        className="accordion-collapse collapse"
                         aria-labelledby="flush-headingOne"
                         data-bs-parent="#accordionFlushExample"
                       >
-                        <div class="accordion-body">
+                        <div className="accordion-body">
                           <input type="text" className="form-control mt-2" />
 
                           <button
@@ -160,16 +160,16 @@ const CheckOutPage = () => {
                   </div>
 
                   <div
-                    class="accordion mt-1 "
+                    className="accordion mt-1 "
                     id="accordionPanelsStayOpenExample"
                   >
-                    <div class="accordion-item">
+                    <div className="accordion-item">
                       <h2
-                        class="accordion-header"
+                        className="accordion-header"
                         id="panelsStayOpen-headingOne"
                       >
                         <button
-                          class="accordion-button"
+                          className="accordion-button"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#panelsStayOpen-collapseOne"
@@ -181,10 +181,10 @@ const CheckOutPage = () => {
                       </h2>
                       <div
                         id="panelsStayOpen-collapseOne"
-                        class="accordion-collapse collapse show"
+                        className="accordion-collapse collapse show"
                         aria-labelledby="panelsStayOpen-headingOne"
                       >
-                        <div class="accordion-body">Order</div>
+                        <div className="accordion-body">Order</div>
                       </div>
                     </div>
                   </div>
